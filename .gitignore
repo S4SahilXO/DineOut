@@ -215,3 +215,4 @@ terraform.tfstate
 terraform.tfstate.backup
 *.tfvars
 artifacts/
+DEMO_SCRIPT.txt
