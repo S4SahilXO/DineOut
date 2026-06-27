@@ -53,7 +53,7 @@ RESTAURANTS = {
     }
 }
 
-@mcp.tool
+@mcp.tool()
 def get_restaurants(cuisine: str = None, price_range: str = None) -> str:
     """Search for restaurants. Optionally filter by cuisine and/or price range.
     
@@ -77,7 +77,7 @@ def get_restaurants(cuisine: str = None, price_range: str = None) -> str:
         })
     return json.dumps(results, indent=2)
 
-@mcp.tool
+@mcp.tool()
 def get_menu(restaurant_id: str) -> str:
     """Get the menu for a specific restaurant by its ID.
     
@@ -92,7 +92,7 @@ def get_menu(restaurant_id: str) -> str:
         "menu": r["menu"]
     }, indent=2)
 
-@mcp.tool
+@mcp.tool()
 def make_reservation(restaurant_id: str, date_time: str, party_size: int) -> str:
     """Make a reservation booking at a restaurant.
     
